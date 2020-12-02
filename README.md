@@ -1,6 +1,6 @@
 # for_ICONIC
 
-Contains code and sql related to the Data Engineer Technical challenge from ICONIC.
+Contains code , sql and documentation related to the Data Engineer Technical challenge from ICONIC.
 
 For Stage 1: 
 
