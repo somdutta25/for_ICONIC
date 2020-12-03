@@ -3,7 +3,7 @@ Produtionalisation strategy: "The business would like to run the above queries o
 As business would like to run the Stage3 queries on daily basis we can move along the steps as mentioned:
 
 1. I would like to build the cleansed fact "customer_profile_fact" (my given name) with date partitioned as a daily snapshot table.
-   So , effectively I would load and cleanse the file every day and put it in the customer_profile_dly_fact(note the name change) which will include a day partition column.
+   So , effectively I would load and cleanse the file every day and put it in the customer_profile_dly_fact(note the name change) which will include a day partition column.Also, would make sure customer_id is the primary key of the table.
 2. I would like to build aggregate tables on top of this daily snapshot as per the queries in stage3 . These tables would also be day partitioned.
 3. I would prefer to build a pipeline in Apache Airflow that will use HiveOperator or similar ones to get these sql populate the corresponding hive tables 
    or connect to BigQuery and create these tables in BigQuery itself. Either way the process would be similar.
